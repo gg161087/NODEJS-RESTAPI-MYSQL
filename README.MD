@@ -1,7 +1,28 @@
-	
-	Table DATABASE:
-	#	name        type
-	1	id          int(10)			Primary, AUTO_INCREMENT		
-	2	name	    varchar(100)	utf8_unicode_ci			
-	3	social_work	varchar(100)	utf8_unicode_ci		
-	4	dni	        int(8)
+mysql start in Xampp, cmd:
+mysql -u root -p
+
+
+CREATE DATABASE IF NOT EXISTS db_hospital;
+
+USE db_hospital;
+
+CREATE TABLE doctors (
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	name VARCHAR(45) NOT NULL,
+	matriculation_number int(10) NOT NULL,
+	dni INT(10) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE patients (
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	name VARCHAR(45) NOT NULL,
+	social_work VARCHAR(45) DEFAULT NULL,
+	dni INT(10) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE treatments (
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	diagnostic VARCHAR(100) NOT NULL,
+	observations VARCHAR(100) DEFAULT NULL,	
+	PRIMARY KEY (id)
+);
