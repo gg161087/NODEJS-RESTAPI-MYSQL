@@ -1,3 +1,11 @@
+create .env:
+PORT = 5000
+ENVIRONMENT = 'development'
+DB_NAME=db_hospital 
+DB_USERNAME=root
+DB_PASSWORD=''
+
+
 mysql start in Xampp, cmd:
 mysql -u root -p
 
