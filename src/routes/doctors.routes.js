@@ -5,10 +5,10 @@ const router = Router()
 
 router.get('/doctors', getDoctors);
 
-router.post('/doctors', postDoctor);
+router.post('/doctor', postDoctor);
 
-router.put('/doctors', putDoctor);
+router.put('/doctor', putDoctor);
 
-router.delete('/doctors', deleteDoctor);
+router.delete('/doctor', deleteDoctor);
 
 export default router

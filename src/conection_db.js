@@ -1,10 +1,10 @@
 import {createPool} from 'mysql2/promise'
-const GLOBAL_CONSTS = require('../src/const/global_consts');
+import {db_config} from './const/global_consts.js';
 
 export const conn = createPool({
-    host: GLOBAL_CONSTS.PORT,
-    user: GLOBAL_CONSTS.DB_USERNAME,
-    password: GLOBAL_CONSTS.DB_PASSWORD,
-    port: 3306,
-    database: GLOBAL_CONSTS.DB_NAME
+    host: db_config.DB_HOST,
+    user: db_config.DB_USERNAME,
+    password: db_config.DB_PASSWORD,
+    port: db_config.DB_PORT,
+    database: db_config.DB_NAME
 });
